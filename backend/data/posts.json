@@ -1,0 +1,17 @@
+[
+  {
+    
+    "title": "articulo #1",
+    "date": "2025-06-08",
+    "excerpt": "provando formulario node.js",
+    "content": "primer articulo de prueba",
+    "id": 1
+  },
+  {
+    "id": 2,
+    "title": "un articulo",
+    "date": "2025-06-09",
+    "excerpt": "provando formulario node.js",
+    "content": "aqui esta"
+  }
+]

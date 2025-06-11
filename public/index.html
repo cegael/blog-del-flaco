@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CegaWeb17studio - Inicio</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bienvenido a CegaWeb17studio</h1>
+    <p>Somos un estudio digital donde creamos ideas, páginas y herramientas para tu negocio.</p>
+    <a href="blog.html">Ver artículos del blog</a>
+  </main>
+  <section>
+    <!-- public/index.html -->
+    <h2>Agregar artículo</h2>
+    <form id="postForm">
+      <input type="text" name="title" placeholder="Título" required />
+      <input type="date" name="date" required />
+      <input type="text" name="excerpt" placeholder="Resumen" required />
+      <textarea name="content" placeholder="Contenido" required></textarea>
+      <button type="submit">Publicar</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Últimos artículos</h2>
+    <div id="home-posts"></div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 CegaWeb17studio - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

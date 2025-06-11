@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agregar Artículo</title>
+</head>
+<body>
+  <h1>Nuevo Artículo</h1>
+  <form id="postForm">
+    <input type="text" id="title" placeholder="Título" required /><br />
+    <input type="date" id="date" required /><br />
+    <input type="text" id="excerpt" placeholder="Resumen" required /><br />
+    <textarea id="content" placeholder="Contenido" required></textarea><br />
+    <button type="submit">Publicar</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("postForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        title: document.getElementById("title").value,
+        date: document.getElementById("date").value,
+        excerpt: document.getElementById("excerpt").value,
+        content: document.getElementById("content").value,
+      };
+
+      try {
+        const response = await fetch("http://localhost:3000/api/posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+        alert("Artículo creado con ID: " + result.id);
+        form.reset();
+      } catch (err) {
+        alert("Error al guardar el artículo");
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
